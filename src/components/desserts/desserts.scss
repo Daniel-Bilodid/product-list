@@ -2,9 +2,13 @@
 
 .desserts {
   width: 100%;
-
+  &__wrapper {
+    display: flex;
+  }
   &__title {
     width: 176px;
+    margin-left: 80px;
+    margin-top: 40px;
   }
 
   &__list {
@@ -12,6 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    margin-left: 40px;
     &-item {
       list-style-type: none;
     }

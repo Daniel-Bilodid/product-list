@@ -1,0 +1,123 @@
+@import "../../variable";
+
+.cart {
+  width: 384px;
+  height: 100%;
+  border-radius: 12px;
+
+  background: rgb(255, 255, 255);
+
+  &__title {
+    color: rgb(199, 59, 15);
+    font-family: $red-hat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-top: 24px;
+    margin-left: 24px;
+  }
+
+  &__name {
+    margin-top: 24px;
+    margin-left: 24px;
+
+    color: rgb(38, 15, 8);
+    font-family: $red-hat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
+  &__text {
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-amount {
+      display: flex;
+      margin-top: 8px;
+      margin-bottom: 16px;
+    }
+    &-count {
+      margin-left: 24px;
+      color: rgb(199, 59, 15);
+      font-family: $red-hat;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 19px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+
+    &-oldprice {
+      margin-left: 8px;
+      color: rgb(135, 99, 90);
+      font-family: $red-hat;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+    &-newprice {
+      margin-left: 8px;
+      color: rgb(135, 99, 90);
+      font-family: $red-hat;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 19px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+
+    &-cancel {
+      width: 30.5px;
+      height: 30.5px;
+      border: 2px solid rgb(173, 138, 133);
+      background: none;
+      border-radius: 100%;
+      margin-right: 22.5px;
+    }
+    &-cancel svg {
+      width: 9px;
+      height: 9px;
+    }
+  }
+  &__hr {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 24px;
+    width: 336px;
+    height: 1px;
+    background: rgb(245, 238, 236);
+  }
+
+  &__order {
+    display: flex;
+    justify-content: space-between;
+    &-text {
+      margin-left: 24px;
+      color: rgb(38, 15, 8);
+      font-family: $red-hat;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+    &-total {
+      color: rgb(38, 15, 8);
+      font-family: $red-hat;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      letter-spacing: 0%;
+      text-align: left;
+      margin-right: 24px;
+    }
+  }
+}
