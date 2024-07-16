@@ -4,62 +4,71 @@
     "img": "/assets/image-waffle-desktop.jpg",
     "type": "Waffle",
     "name": "Waffle with Berries",
-    "price": "6.50"
+    "price": "6.50",
+    "count": 0
   },
   {
     "id": 2,
     "img": "/assets/image-creme-brulee-desktop.jpg",
     "type": "Crème Brûlée",
     "name": "Vanilla Bean Crème Brûlée",
-    "price": "7.00"
+    "price": "7.00",
+    "count": 0
   },
   {
     "id": 3,
     "img": "/assets/image-macaron-desktop.jpg",
     "type": "Macaron",
     "name": "Macaron Mix of Five",
-    "price": "8.00"
+    "price": "8.00",
+    "count": 0
   },
   {
     "id": 4,
     "img": "/assets/image-tiramisu-desktop.jpg",
     "type": "Tiramisu",
     "name": "Classic Tiramisu",
-    "price": "5.50"
+    "price": "5.50",
+    "count": 0
   },
   {
     "id": 5,
     "img": "/assets/image-baklava-desktop.jpg",
     "type": "Baklava",
     "name": "Pistachio Baklava",
-    "price": "4.00"
+    "price": "4.00",
+    "count": 0
   },
   {
     "id": 6,
     "img": "/assets/image-meringue-desktop.jpg",
     "type": "Pie",
     "name": "Lemon Meringue Pie",
-    "price": "5.00"
+    "price": "5.00",
+    "count": 0
   },
   {
     "id": 7,
     "img": "/assets/image-cake-desktop.jpg",
     "type": "Cake",
     "name": "Red Velvet Cake",
-    "price": "4.50"
+    "price": "4.50",
+    "count": 0
   },
   {
     "id": 8,
     "img": "/assets/image-brownie-desktop.jpg",
     "type": "Brownie",
     "name": "Salted Caramel Brownie",
-    "price": "5.50"
+    "price": "5.50",
+    "count": 0
   },
   {
     "id": 9,
     "img": "/assets/image-panna-cotta-desktop.jpg",
     "type": "Panna Cotta",
     "name": "Vanilla Panna Cotta",
-    "price": "6.50"
+    "price": "6.50",
+    "count": 0
   }
 ]
