@@ -32,6 +32,27 @@
     text-align: left;
   }
 
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    svg {
+      margin-top: 53px;
+      margin-bottom: 29px;
+    }
+    &-text {
+      color: rgb(135, 99, 90);
+      font-family: $red-hat;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 19px;
+      letter-spacing: 0%;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+  }
+
   &__text {
     &-wrapper {
       display: flex;
@@ -81,7 +102,9 @@
       background: none;
       border-radius: 100%;
       margin-right: 22.5px;
+      cursor: pointer;
     }
+
     &-cancel svg {
       width: 9px;
       height: 9px;
@@ -118,6 +141,66 @@
       letter-spacing: 0%;
       text-align: left;
       margin-right: 24px;
+    }
+    &-delivery {
+      width: 336px;
+      height: 52px;
+      margin: 0 auto;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      border-radius: 8px;
+
+      background: rgb(252, 248, 246);
+      svg {
+        margin-top: 16px;
+        margin-right: 9.87px;
+      }
+    }
+    &-acarbon {
+      color: rgb(38, 15, 8);
+      font-family: $red-hat;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0%;
+      text-align: left;
+      margin-top: 16px;
+      span {
+        color: rgb(38, 15, 8);
+        font-family: $red-hat;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 19px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+    }
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-confirm {
+      width: 336px;
+      height: 53px;
+      border: none;
+      border-radius: 999px;
+
+      background: rgb(199, 59, 15);
+
+      color: rgb(255, 255, 255);
+      font-family: $red-hat;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 21px;
+      letter-spacing: 0%;
+      cursor: pointer;
+      margin-bottom: 24px;
+      margin-left: 24px;
+
+      &:hover {
+        background: rgb(149, 44, 12);
+      }
     }
   }
 }

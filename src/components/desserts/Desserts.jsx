@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./desserts.scss";
 import data from "../../data.json";
 import Cart from "../cart/Cart";
 
 function Desserts() {
   const [cartItems, setCartItems] = useState([]);
-  let [total, setTotal] = useState();
+  let [total, setTotal] = useState(0);
+  let [count, setCount] = useState();
 
   const handleAddToCart = (item) => {
     setCartItems((prevItems) => {
@@ -21,14 +22,23 @@ function Desserts() {
       }
     });
   };
-  const countAll = (item) => {
-    setCartItems((prevItems) => {
-      prevItems.map((cartItem) => {
-        if (cartItem.id === item.id) {
-          setTotal((total += item.count * item.price));
-        }
-      });
-    });
+
+  useEffect(() => {
+    calculateTotal();
+    calculateCount();
+  }, [cartItems]);
+
+  const calculateTotal = () => {
+    const newTotal = cartItems.reduce(
+      (acc, item) => acc + item.count * item.price,
+      0
+    );
+    setTotal(newTotal);
+  };
+
+  const calculateCount = () => {
+    const newCount = cartItems.reduce((acc, item) => acc + item.count, 0);
+    setCount(newCount);
   };
 
   const handleIncrement = (item) => {
@@ -79,17 +89,36 @@ function Desserts() {
                   {count > 0 ? (
                     <div className="desserts__button-group">
                       <button
-                        className="desserts__button"
+                        className="desserts__select-button deserts__select-dec"
                         onClick={() => handleDecrement(item)}
                       >
-                        -
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="2"
+                          fill="none"
+                          viewBox="0 0 10 2"
+                        >
+                          <path fill="#fff" d="M0 .375h10v1.25H0V.375Z" />
+                        </svg>
                       </button>
-                      <span>{count}</span>
+                      <span className="deserts__select-count">{count}</span>
                       <button
-                        className="desserts__button"
+                        className="desserts__select-button deserts__select-inc"
                         onClick={() => handleIncrement(item)}
                       >
-                        +
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="10"
+                          fill="none"
+                          viewBox="0 0 10 10"
+                        >
+                          <path
+                            fill="#fff"
+                            d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z"
+                          />
+                        </svg>
                       </button>
                     </div>
                   ) : (
@@ -129,7 +158,12 @@ function Desserts() {
           })}
         </ul>
 
-        <Cart cartItems={cartItems} />
+        <Cart
+          setCartItems={setCartItems}
+          cartItems={cartItems}
+          total={total}
+          count={count}
+        />
       </div>
     </div>
   );

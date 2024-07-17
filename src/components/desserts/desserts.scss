@@ -10,7 +10,16 @@
     margin-left: 80px;
     margin-top: 40px;
   }
-
+  &__select {
+    &-button {
+      background: none;
+      width: 30.5px;
+      height: 30.5px;
+      border: 2px solid rgb(255, 255, 255);
+      background: none;
+      border-radius: 100%;
+    }
+  }
   &__list {
     width: 50%;
     display: flex;
@@ -40,6 +49,19 @@
     line-height: 19px;
     letter-spacing: 0%;
     cursor: pointer;
+
+    &-group {
+      width: 160px;
+      height: 44px;
+      border-radius: 999px;
+      position: absolute;
+      margin-top: -30px;
+      margin-left: 45.33px;
+      background: rgb(199, 59, 15);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
   &__button:hover {
     box-sizing: border-box;
@@ -90,4 +112,27 @@
       width: 250px;
     }
   }
+}
+.deserts__select-inc {
+  cursor: pointer;
+  margin-top: 7px;
+  margin-right: 13px;
+}
+.deserts__select-dec {
+  cursor: pointer;
+  margin-top: 7px;
+  margin-left: 13px;
+}
+.deserts__select-count {
+  color: rgb(255, 255, 255);
+  font-family: $red-hat;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-top: 12px;
+}
+.div {
+  display: none;
 }

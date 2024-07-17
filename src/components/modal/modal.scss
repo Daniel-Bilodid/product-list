@@ -1,0 +1,77 @@
+@import "../../variable";
+
+.modal {
+  width: 592px;
+  height: 685px;
+  border-radius: 12px;
+
+  background: rgb(255, 255, 255);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  display: none;
+  &__text {
+    &-order {
+      color: rgb(38, 15, 8);
+      font-family: $red-hat;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: 0%;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    &-descr {
+      color: rgb(135, 99, 90);
+      font-family: $red-hat;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0%;
+      text-align: left;
+      margin-top: 16px;
+    }
+  }
+  &__button {
+    width: 512px;
+    height: 53px;
+    box-sizing: border-box;
+    background: rgb(199, 59, 15);
+    border-radius: 999px;
+    border: none;
+
+    margin-top: 36px;
+    color: rgb(255, 255, 255);
+    font-family: $red-hat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0%;
+  }
+
+  &__information {
+    width: 100%;
+    padding: 24px;
+    border-radius: 8px;
+
+    background: rgb(252, 248, 246);
+    margin: 0 auto;
+    margin-top: 44px;
+    box-sizing: border-box;
+  }
+}
+.card__text-img img {
+  width: 40px;
+  height: 40px;
+  margin-top: 27px;
+}
+
+.card {
+  &__wrapper {
+    display: flex;
+  }
+}
