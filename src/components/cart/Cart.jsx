@@ -163,7 +163,12 @@ function Cart({ setCartItems, cartItems, total, count }) {
           </>
         )}
       </div>
-      <Modal cartItems={cartItems} total={total} isModalOpen={isModalOpen} />
+      <Modal
+        cartItems={cartItems}
+        total={total}
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+      />
     </div>
   );
 }

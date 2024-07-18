@@ -7,8 +7,15 @@
   }
   &__title {
     width: 176px;
-    margin-left: 80px;
-    margin-top: 40px;
+    margin-left: 112px;
+    margin-top: 89px;
+    color: rgb(38, 15, 8);
+    font-family: $red-hat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;
   }
   &__select {
     &-button {
@@ -21,18 +28,20 @@
     }
   }
   &__list {
-    width: 50%;
+    width: 58%;
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    margin-left: 40px;
+    margin-left: 72px;
+    margin-top: -10px;
     &-item {
       list-style-type: none;
+      margin-top: 13px;
     }
   }
   &__button {
     position: absolute;
-    margin-top: -30px;
+    margin-top: -26px;
     margin-left: 45.33px;
     width: 160px;
     height: 44px;
@@ -74,7 +83,7 @@
 
   &__text {
     &-type {
-      margin-top: 38px;
+      margin-top: 35px;
       color: rgb(135, 99, 90);
       font-family: $red-hat;
       font-size: 14px;
@@ -92,6 +101,7 @@
       line-height: 21px;
       letter-spacing: 0%;
       text-align: left;
+      margin-top: 3px;
     }
 
     &-price {
@@ -102,6 +112,7 @@
       line-height: 21px;
       letter-spacing: 0%;
       text-align: left;
+      margin-top: 4px;
     }
   }
   &__img {
@@ -135,4 +146,26 @@
 }
 .div {
   display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .desserts {
+    padding: 40px;
+
+    &__title {
+    }
+    &__list {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    &__title {
+      margin: 0;
+    }
+    &__wrapper {
+      flex-direction: column;
+    }
+  }
 }
