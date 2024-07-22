@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Modal from "../modal/Modal";
 import "./cart.scss";
 
@@ -10,57 +11,64 @@ function Cart({ setCartItems, cartItems, total, count }) {
 
     setCartItems(newCartItems);
   }
+
   let [isModalOpen, setIsModalOpen] = useState(false);
 
   function modalToggle() {
     setIsModalOpen(!isModalOpen);
   }
+
   return (
-    <div className="cart">
+    <aside className="cart">
       <div className="cart__wrapper">
         <div className="cart__title">
           Your Cart ({count ? count : cartItems.length})
         </div>
 
-        {cartItems.length ? (
-          cartItems.map((item) => (
-            <React.Fragment key={item.id}>
-              <div className="cart__name">{item.name}</div>
-
-              <div className="cart__text-wrapper">
-                <div className="cart__text-amount">
-                  <div className="cart__text-count">{item.count}x</div>
-                  <div className="cart__text-oldprice">@${item.price}</div>
-                  <div className="cart__text-newprice">
-                    ${item.price * item.count}
+        <AnimatePresence>
+          {cartItems.length ? (
+            cartItems.map((item) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="cart__name">{item.name}</div>
+                <div className="cart__text-wrapper">
+                  <div className="cart__text-amount">
+                    <div className="cart__text-count">{item.count}x</div>
+                    <div className="cart__text-oldprice">@${item.price}</div>
+                    <div className="cart__text-newprice">
+                      ${item.price * item.count}
+                    </div>
                   </div>
-                </div>
-
-                <button
-                  className="cart__text-cancel"
-                  onClick={() => deleteItem(item)}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="10"
-                    height="10"
-                    fill="none"
-                    viewBox="0 0 10 10"
+                  <button
+                    className="cart__text-cancel"
+                    onClick={() => deleteItem(item)}
                   >
-                    <path
-                      fill="#CAAFA7"
-                      d="M8.375 9.375 5 6 1.625 9.375l-1-1L4 5 .625 1.625l1-1L5 4 8.375.625l1 1L6 5l3.375 3.375-1 1Z"
-                    />
-                  </svg>
-                </button>
-              </div>
-
-              <div className="cart__hr"></div>
-            </React.Fragment>
-          ))
-        ) : (
-          <></>
-        )}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                      fill="none"
+                      viewBox="0 0 10 10"
+                    >
+                      <path
+                        fill="#CAAFA7"
+                        d="M8.375 9.375 5 6 1.625 9.375l-1-1L4 5 .625 1.625l1-1L5 4 8.375.625l1 1L6 5l3.375 3.375-1 1Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div className="cart__hr"></div>
+              </motion.div>
+            ))
+          ) : (
+            <></>
+          )}
+        </AnimatePresence>
 
         {total ? (
           <>
@@ -169,7 +177,7 @@ function Cart({ setCartItems, cartItems, total, count }) {
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}
       />
-    </div>
+    </aside>
   );
 }
 
