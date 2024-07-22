@@ -8,7 +8,7 @@
   &__title {
     width: 176px;
     margin-left: 112px;
-    margin-top: 89px;
+    margin-top: 88px;
     color: rgb(38, 15, 8);
     font-family: $red-hat;
     font-size: 40px;
@@ -17,6 +17,7 @@
     letter-spacing: 0%;
     text-align: left;
   }
+
   &__select {
     &-button {
       background: none;
@@ -36,7 +37,17 @@
     margin-top: -10px;
     &-item {
       list-style-type: none;
-      margin-top: 13px;
+      margin-top: 11px;
+    }
+    &-item:nth-child(-n + 3) {
+      margin-top: 15px;
+    }
+    &-item:nth-child(n + 4):nth-child(-n + 7) {
+      margin-top: 9px;
+    }
+
+    &-item:nth-child(n + 7):nth-child(-n + 9) {
+      margin-top: 8px;
     }
   }
   &__button {
@@ -50,7 +61,10 @@
     border-radius: 999px;
 
     background: rgb(255, 255, 255);
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
     color: rgb(38, 15, 8);
     font-family: $red-hat;
     font-size: 14px;
@@ -72,6 +86,7 @@
       justify-content: space-between;
     }
   }
+
   &__button:hover {
     box-sizing: border-box;
     border: 1px solid rgb(199, 59, 15);
@@ -152,8 +167,6 @@
   .desserts {
     padding: 40px;
 
-    &__title {
-    }
     &__list {
       margin: 0;
       padding: 0;

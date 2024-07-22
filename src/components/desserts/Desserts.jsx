@@ -143,7 +143,7 @@ function Desserts() {
                           </clipPath>
                         </defs>
                       </svg>{" "}
-                      Add to Cart
+                      <div className="dessert__add">Add to Cart</div>
                     </button>
                   )}
                 </div>

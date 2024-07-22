@@ -6,6 +6,8 @@
   border-radius: 12px;
   margin-top: -75px;
   background: rgb(255, 255, 255);
+  padding-bottom: 23px;
+  margin-left: -2px;
 
   &__title {
     color: rgb(199, 59, 15);
@@ -16,7 +18,7 @@
     letter-spacing: 0%;
     text-align: left;
     margin-top: 24px;
-    margin-left: 24px;
+    margin-left: 23px;
   }
 
   &__name {
@@ -40,7 +42,7 @@
     svg {
       margin-top: 39px;
       margin-bottom: 16px;
-      margin-left: -6px;
+      margin-left: -2px;
     }
     &-text {
       color: rgb(135, 99, 90);
@@ -51,7 +53,7 @@
       letter-spacing: 0%;
       text-align: center;
       margin-bottom: 16px;
-      margin-left: -7px;
+      margin-left: -3px;
     }
   }
 

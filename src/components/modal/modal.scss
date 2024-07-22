@@ -136,6 +136,7 @@
     }
     &__content {
       width: 100%;
+      overflow-x: hidden;
     }
     &__text {
       &-order {
