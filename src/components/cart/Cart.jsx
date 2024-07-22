@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Modal from "../modal/Modal";
 import "./cart.scss";
@@ -17,6 +17,12 @@ function Cart({ setCartItems, cartItems, total, count }) {
   function modalToggle() {
     setIsModalOpen(!isModalOpen);
   }
+
+  useEffect(() => {
+    if (!isModalOpen) {
+      setCartItems([]);
+    }
+  }, [isModalOpen, setCartItems]);
 
   return (
     <aside className="cart">
